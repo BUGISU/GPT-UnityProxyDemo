@@ -56,7 +56,7 @@ GPT-UnityProxyDemo/
   ));
   ````
 
-### 2️⃣ **ChatRequestModels.cs**
+### **ChatRequestModels.cs**
 
 * OpenAI Responses API에 맞는 요청 데이터 구조 정의
 * 여러 메시지(`role`, `message`)를 누적하여 **대화형 요청** 구성
@@ -68,7 +68,7 @@ GPT-UnityProxyDemo/
   }
   ```
 
-### 3️⃣ **ResponsesModels.cs**
+### **ResponsesModels.cs**
 
 * OpenAI Responses API의 응답(JSON)을 Unity에서 파싱하기 위한 구조체 정의
 
@@ -79,13 +79,13 @@ GPT-UnityProxyDemo/
   }
   ```
 
-### 4️⃣ **Unity 대화 UI**
+### **Unity 대화 UI**
 
 * InputField로 사용자 입력 → ChatService 호출
 * TextMeshPro 기반 UI에 GPT 응답 표시
 * API 지연 처리, 네트워크 오류 처리 로직 포함
 
-## 🔄 동작 흐름
+## 동작 흐름
 
 ```
 [Unity Client]
@@ -117,9 +117,16 @@ GPT-UnityProxyDemo/
 
 ## 시연 화면
 
-| Chat 요청                                                          | Proxy 중계                                                                  | GPT 응답 표시                                                              |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| <img src="./docs/unity_chat_input.png" width="250"/> <br/>사용자 입력 | <img src="./docs/render_proxy_request.png" width="250"/> <br/>Proxy 서버 중계 | <img src="./docs/unity_chat_response.png" width="250"/> <br/>GPT 응답 출력 |
+| **1️⃣ Render Proxy 서버 배포 (onRender)** | **2️⃣ Postman 테스트 (응답 200 OK)** |
+|----------------------------------|--------------------------------|
+| <img src="./docs/스크린샷%202025-10-22%20144501.png" width="400"/> | <img src="./docs/스크린샷%202025-10-22%20145338.png" width="400"/> |
+
+| **3️⃣ Unity → Proxy 요청 전송 (ChatService)** | **4️⃣ Unity에서 GPT 응답 출력** |
+|------------------------------------|--------------------------------|
+| <img src="./docs/스크린샷%202025-10-22%20145425.png" width="400"/> | <img src="./docs/스크린샷%202025-10-22%20150051.png" width="400"/> |
+
+> ✅ Unity → Proxy → OpenAI API 전체 흐름이 정상 작동하며,  
+> Proxy 서버를 통해 안전하게 ChatGPT와 실시간 대화가 이루어집니다.
 
 ## 개발 특징
 
