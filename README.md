@@ -137,7 +137,7 @@ GPT-UnityProxyDemo/
 * 간단한 UI 기반으로 **ChatGPT와 동일한 대화 흐름** 구현
 
 
-## 🚀 실행 예시 코드
+## 실행 예시 코드
 
 ```csharp
 ChatRequest req = new ChatRequest();
@@ -154,12 +154,12 @@ StartCoroutine(chatService.SendChatRequest(req,
 ));
 ```
 
-## 🔐 참고 자료
+## 참고 자료
 
 * 🔗 **Proxy Repository:** [https://github.com/BUGISU/openai-proxy](https://github.com/BUGISU/openai-proxy)
 * 📘 **OpenAI Responses API Docs:** [https://api.openai.com/v1/responses](https://api.openai.com/v1/responses)
 
-## 🏁 결과
+## 결과
 
 ✅ Render 기반 Proxy를 통한 안전한 OpenAI 통신 구조 구현
 ✅ Unity에서 OpenAI API를 직접 제어하는 **ChatGPT 스타일 대화형 인터페이스 완성**
