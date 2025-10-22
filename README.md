@@ -160,7 +160,6 @@ StartCoroutine(chatService.SendChatRequest(req,
 * 📘 **OpenAI Responses API Docs:** [https://api.openai.com/v1/responses](https://api.openai.com/v1/responses)
 
 ## 결과
-
 ✅ Render 기반 Proxy를 통한 안전한 OpenAI 통신 구조 구현
 ✅ Unity에서 OpenAI API를 직접 제어하는 **ChatGPT 스타일 대화형 인터페이스 완성**
 ✅ Unity 환경에서의 GPT 활용 구조 학습 및 확장 가능성 검증
